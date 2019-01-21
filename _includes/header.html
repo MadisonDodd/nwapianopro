@@ -1,0 +1,8 @@
+<h1 style="color: {{include.color}}">{{site.title}}</h1>
+<hr><br>
+
+{% for page in site.pages %}
+    {%if page.title != ""%}
+        <li><a href="{{ page.url }}">" page Title:{{page.title}}"</a></li>
+    {%endif%}
+{% endfor %}
