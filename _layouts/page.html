@@ -1,8 +1,20 @@
 ---
-layout: wrapper
-title:
+layout: default
 ---
-<h1>{{page.title}}</h1>
-<hr>
 
-{{content}}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{site.title}}</title>
+    </head>
+    <body>
+        <div>
+        {% for pageName in site.pages%}
+            {%if pageName.title == "About" or pageName.title == "Our History" or pageName.title == "Contact Us" or pageName.title == "Inquiry"%}
+            <a href={{pageName.url}}>{{pageName.title}}</a>
+            {%endif%}
+        {%endfor%}
+        </div>
+        {{content}}
+    </body>
+</html>

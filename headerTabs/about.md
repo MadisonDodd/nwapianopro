@@ -1,18 +1,20 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<div>
+<h1>About Us</h1>
+My name is Andrew Dodd, owner and proprietor of North West Arkansas Piano Pro LLC.
+Coming from a family of 13 brothers and sisters we moved a lot, and I always helped in the moves. My father taught me a lot of moving techniques to not scratch or dent any furniture. I took this knowledge and came to North West Arkansas where I work fulltime doing Trim work for a Construction company. I use my free time to move Pianos as a part time business owner. 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+<div>
+{% for pageName in site.pages%}
+    {%if pageName.title == "Inquiry"%}
+        For a free inquiry about our prices click the link here-> 
+        <a href={{pageName.url}}>{{pageName.title}}</a>
+    {%endif%}
+{%endfor%}
+</div>
+</div>

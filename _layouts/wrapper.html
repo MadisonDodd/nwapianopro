@@ -8,7 +8,13 @@ layout: default
         <title>{{site.title}}</title>
     </head>
     <body>
-        {%include header.html color="red"%}
+        <div>
+        {% for pageName in site.pages%}
+            {%if pageName.title == "About" or pageName.title == "Our History" or pageName.title == "Contact Us"%}
+            <a href={{pageName.url}}>{{pageName.title}}</a>
+            {%endif%}
+        {%endfor%}
+        </div>
         {{content}}
     </body>
 </html>
