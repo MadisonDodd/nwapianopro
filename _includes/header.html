@@ -1,8 +1,7 @@
-<h1 style="color: {{include.color}}">{{site.title}}</h1>
-<hr><br>
-
-{% for page in site.pages %}
-    {%if page.title != ""%}
-        <li><a href="{{ page.url }}">" page Title:{{page.title}}"</a></li>
-    {%endif%}
-{% endfor %}
+<nav>
+    {% for nav in site.data.navigation %}
+    <a href="{{ nav.link }}" {% if page.url == nav.link %} class="current"{% endif %}>
+        {{ nav.name }}
+    </a>
+    {% endfor %}
+</nav>

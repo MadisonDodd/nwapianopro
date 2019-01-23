@@ -5,16 +5,11 @@ layout: default
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{{site.title}}</title>
+        <title>{{page.title}}</title>
+        <link rel="stylesheet" href="/assets/css/customStyle.css">
     </head>
     <body>
-        <div>
-        {% for pageName in site.pages%}
-            {%if pageName.title == "About" or pageName.title == "Our History" or pageName.title == "Contact Us" or pageName.title == "Inquiry"%}
-            <a href={{pageName.url}}>{{pageName.title}}</a>
-            {%endif%}
-        {%endfor%}
-        </div>
+        {% include header.html %}
         {{content}}
     </body>
 </html>

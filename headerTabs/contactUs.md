@@ -1,9 +1,10 @@
 ---
 layout: page
 title: "Contact Us"
-permalink: /contactUs/
+permalink: /contactUs
 ---
 
+<body>
 <h1> Contact Us </h1>
 
 <div>
@@ -15,9 +16,10 @@ Email: nwapianoprollc@gmail.com <br>
 <div>
 {% for pageName in site.pages%}
     {%if pageName.title == "Inquiry"%}
-        For a free inquiry about our prices click the link here-> 
-        <div><a href={{pageName.url}}>{{pageName.title}}</a> </div>
+        For a free inquiry about our prices and services click the link here-> 
+         <a href="{{pageName.url}}">{{pageName.title}}</a>
     {%endif%}
 {%endfor%}
 </div>
 </div>
+</body>
